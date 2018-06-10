@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Who's That Pokemon?!</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  </head>
+
+  <!-- start body -->
+  <body>
+    <!-- start header -->
+    <header class="text-center">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- pokemon banner -->
+          <img class="header" src="assets/images/whosthatpokemon.png" alt="whos-that-pokemon-logo" />
+        </div>
+      </div>
+    </header>
+
+    <div class="container text-center">
+      <div class="jumbotron">
+        <div class="mx-auto jumbotron main-display">
+
+          <!-- counters -->
+          <div class="row countersText">
+
+            <div class="col-lg-4 mr-auto">
+              <p>Guesses Remaining:
+                <span id="guessesLeftDisplay">6</span>
+              </p>
+            </div>
+
+            <div class="offset-lg-5 col-lg-3">
+              <p>Wins:
+                <span id="winsDisplay">0</span>
+              </p>
+            </div>
+
+            <div class="offset-lg-9 col-lg-3">
+              <p>Losses:
+                <span id="lossesDisplay">0</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 ">
+              <img class="img-fluid rounded" src="assets/images/grass.png" alt="background-image" />
+              <img class="innerOverlay" src="" id="pictureDisplay" alt="" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <h6>Please any key to get started!</h6>
+            </div>
+          </div>
+        </div>
+
+          <!-- start word display (displays current word, answer reveals (if wrong), & guesses already made) -->
+        <div class="row">
+          <div class="col-lg-12">
+              <h5>Current Word</h5>
+              <p class="mainType"><span id="currentWordDisplay"></span></p>
+              <p class="mainType" id="revealedAnswerDisplay"></p>
+              <p class="mainType" id="correctDisplay"></p>
+              <h6>Letters Already Guessed</h6>
+              <p class="activeWords"><span id="guessesMadeDisplay"></span></p>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col-lg-5">
+            <button class="btn btn-success" onclick="playMusic()">
+            <span class="fa fa-music"></span> Play Theme!</button>
+            <button class="btn btn-dark" onclick="pauseMusic()">
+            <span class="fa fa-pause"></span> Pause Song</button>
+          </div>
+
+          <div class="offset-lg-1 col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">HOW TO PLAY</h5>
+                <ul class-card-text>
+                  <li class="text-left">Who's that Pokemon?! That's what we're trying to figure out.</li>
+                  <li class="text-left">By pressing a key you can guess what letter goes in the Pokemon's name that is shown.</li>
+                  <li class="text-left">If you guess the correct name before running out of guesses, you win!.</li>
+                  <li class="text-left">If you do run out of guesses though, you lose. So decide wisely and good luck!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- audio -->
+    <audio id="whosThatPokemon" src="assets/music/whos-that-pokemon.mp3"></audio>
+    <audio id="pokemonTheme" src="assets/music/Pokemon.mp3"></audio>
+
+    <!-- Bootstrap JS SCRIPTS/GAME js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js" type="text/javascript">
+
+    function playMusic() {
+      var song = document.getElementById('pokemonTheme');
+      if (song.paused){
+        song.play();
+      } else {
+        song.pause();
+      }
+    };
+
+    </script>
+  </body>
+  <!-- end body -->
+</html>

@@ -1,0 +1,99 @@
+body {
+  margin: auto 0;
+  max-width: 98%;
+  background-color: #f43c48;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+  margin: 0 auto;
+}
+
+h5, h6 {
+    margin-top: 2.5%;
+    color: #777;
+}
+
+.container, .jumbotron {
+  max-width: 960px;
+}
+
+.jumbotron {
+  padding: 2rem;
+}
+
+.header {
+    margin-bottom: 0.8rem;
+}
+
+.main-display {
+    background-color: #2a2a2a;
+    max-width: 90%;
+}
+
+.innerOverlay {
+    position: absolute;
+    float: left;
+    width: 30%;
+    right: 40%;
+    bottom: 30%;
+    top: 10%;
+    left: 35%;
+}
+
+.countersText {
+  color: #fff;
+}
+
+.mainType {
+    letter-spacing: .3%;
+    color: #808080;
+}
+
+#revealedAnswerDisplay {
+    color: red;
+}
+
+#guessesMadeDisplay {
+    font-size: 10pt;
+    color: #777;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+/**** media queries ****/
+
+@media screen and (max-width: 768px) {
+
+    body {
+      margin: auto 0;
+      max-width: 95%;
+    }
+
+    h6 {
+        font-size: 0.75em;
+    }
+
+    .countersText {
+      text-align: center !important;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .mainType, h5 {
+        font-size: 12px;
+    }
+
+    #currentWordDisplay{
+      font-size: 10pt;
+    }
+}
