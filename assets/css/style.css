@@ -54,6 +54,10 @@ h5, h6 {
     color: #808080;
 }
 
+li {
+  color: #545454;
+}
+
 #revealedAnswerDisplay {
     color: red;
 }

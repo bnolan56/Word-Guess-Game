@@ -1,4 +1,4 @@
-/* Pokemon arry and its objects */
+/*** Pokemon arry and its objects ***/
 
 var pokemonArray = [
     {
@@ -78,7 +78,7 @@ var lettersRemaining = pokemon.length;
 // creates answer that can have values pushed into
 var answerArray = [];
 
-/* event listeners */
+/*** event listeners ***/
 
 // on key event listeners that does an onkeyup event
 document.addEventListener("keyup", function(event){
@@ -177,7 +177,7 @@ function addIncorrectLetter(guess) {
   }
 }
 
-/* Functions */
+/*** Functions ***/
 
 // displays number of wins
 function displayWins() {
