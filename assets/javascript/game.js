@@ -294,26 +294,13 @@ function init() {
     // pllays audio for the clip whos that pokemon?
     document.getElementById('whosThatPokemon').play();
 
-    // function playMusic() {
-    //   var song = document.getElementById('pokemonTheme');
-    //   if (song.paused){
-    //     song.play();
-    //   } else {
-    //     song.pause();
-    //   }
-    // };
+    document.getElementById("playMusic").addEventListener("click", function(){
+      document.getElementById("pokemonTheme").play();
+    });
 
-    // function pauseMusic(){
-    //   song.pause();
-    // };
-
-    // document.getElementsByClassName("fa-music").on("click", function audioElement() {
-    //   audioElement.play();
-    // });
-    //
-    // document.getElementsByClassName("fa-pause").on("click", function() {
-    //   audioElement.pause();
-    // });
+    document.getElementById("pauseMusic").addEventListener("click", function(){
+      document.getElementById("pokemonTheme").pause();
+    });
 
     // removes correct color on word when finished and restarting game
     removeCorrect();

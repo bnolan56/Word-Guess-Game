@@ -104,4 +104,15 @@ li {
     #currentWordDisplay{
       font-size: 10pt;
     }
+
+    .innerOverlay {
+        position: absolute;
+        float: left;
+        width: 60%;
+        right: 50%;
+        bottom: 30%;
+        top: 6%;
+        left: 21%;
+    }
+
 }
